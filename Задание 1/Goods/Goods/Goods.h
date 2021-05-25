@@ -29,7 +29,7 @@ public:
 	 * @brief Метод возвращающий дату оформления продукта
 	 * @return Дата оформления продукта
 	*/
-	std::string the_date_of_the_product() const;
+	std::tm the_date_of_the_product() const;
 	/**
 	 * @brief Метод возвращающий цену продукта
 	 * @return  Цена продукта
