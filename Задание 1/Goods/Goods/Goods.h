@@ -1,101 +1,95 @@
 #pragma once
 #include <string>
 /**
- * @brief Класс товар
+ * @brief РљР»Р°СЃСЃ С‚РѕРІР°СЂ
 */
 class Goods
 {
 public:
-	/**
-	* @brief Конструктор по умолчанию
+		/**
+	 * @brief РџР°СЂР°РјРµС‚СЂРёР·РѕРІР°РЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
+	 * @param thenameoftheproduct РРјСЏ РїСЂРѕРґСѓРєС‚Р°	
+	 * @param thepriceoftheproduct Р¦РµРЅР° РїСЂРѕРґСѓРєС‚Р°
+	 * @param numberofunitsofgoods РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚Р°
+	 * @param thedateoftheproduct Р”Р°С‚Р° РѕС„РѕСЂРјР»РµРЅРёСЏ РїСЂРѕРґСѓРєС‚Р°
+	 * @param numberofwaybill РќРѕРјРµСЂ РЅР°РєР»Р°РґРЅРѕР№
 	*/
-	Goods();
+	Goods(const std::string the_name_of_the_product, const double the_price_of_the_product, const int number_of_units_of_goods, const std::string the_date_of_the_product, const std::string number_of_waybill);
 	/**
-	 * @brief Параметризованный конструктор
-	 * @param thenameoftheproduct Имя продукта	
-	 * @param thepriceoftheproduct Цена продукта
-	 * @param numberofunitsofgoods Количество продукта
-	 * @param thedateoftheproduct Дата оформления продукта
-	 * @param numberofwaybill Номер накладной
-	*/
-	Goods(const std::string thenameoftheproduct, const double thepriceoftheproduct, const int numberofunitsofgoods, const std::string thedateoftheproduct, const std::string numberofwaybill);
-	/**
-	* @brief Деструктор
+	* @brief Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 	*/
 	~Goods();
 
 	/**
-	 * @brief Метод возвращающий имя продукта
-	 * @return Имя продукта
+	 * @brief РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РёРјСЏ РїСЂРѕРґСѓРєС‚Р°
+	 * @return РРјСЏ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	std::string GetNameofproduct() const;
+	std::string get_name_of_product() const;
 	/**
-	 * @brief Метод возвращающий дату оформления продукта
-	 * @return Дата оформления продукта
+	 * @brief РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РґР°С‚Сѓ РѕС„РѕСЂРјР»РµРЅРёСЏ РїСЂРѕРґСѓРєС‚Р°
+	 * @return Р”Р°С‚Р° РѕС„РѕСЂРјР»РµРЅРёСЏ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	std::string thedateoftheproduct() const;
+	std::string the_date_of_the_product() const;
 	/**
-	 * @brief Метод возвращающий цену продукта
-	 * @return  Цена продукта
+	 * @brief РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ С†РµРЅСѓ РїСЂРѕРґСѓРєС‚Р°
+	 * @return  Р¦РµРЅР° РїСЂРѕРґСѓРєС‚Р°
 	*/
-	double Getthepriceoftheproduct() const;
+	double get_the_price_of_the_product() const;
 	/**
-	 * @brief Метод возвращающий количество продуктов
-	 * @return Количество продуктов
+	 * @brief РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚РѕРІ
+	 * @return РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚РѕРІ
 	*/
-	int Getnumberofunitsofgoods() const;
+	int get_number_of_units_of_goods() const;
 	/**
-	 * @brief Метод возвращающий номер накладкой
-	 * @return Номер накладной
+	 * @brief РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ РЅРѕРјРµСЂ РЅР°РєР»Р°РґРєРѕР№
+	 * @return РќРѕРјРµСЂ РЅР°РєР»Р°РґРЅРѕР№
 	*/
-	std::string Getnumberofwaybillr() const;
+	std::string get_number_of_waybillr() const;
 	
 	/**
-	 * @brief Изменения цены продукта
-	 * @param thepriceoftheproduct Изменяемая цена продукта
-	 * @return Новая цена продукта 
+	 * @brief РР·РјРµРЅРµРЅРёСЏ С†РµРЅС‹ РїСЂРѕРґСѓРєС‚Р°
+	 * @param thepriceoftheproduct РР·РјРµРЅСЏРµРјР°СЏ С†РµРЅР° РїСЂРѕРґСѓРєС‚Р°
+	 * @return РќРѕРІР°СЏ С†РµРЅР° РїСЂРѕРґСѓРєС‚Р° 
 	*/
-	double changesinthepriceofgoods(const double thepriceoftheproduct) const;
+	double changes_in_the_price_of_goods(const double the_price_of_the_product) const;
 	/**
-	 * @brief Изменения количества продукта
-	 * @param numberofunitsofgoods Изменяемое количество продукта 
-	 * @return Новое количество продукта
+	 * @brief РР·РјРµРЅРµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° РїСЂРѕРґСѓРєС‚Р°
+	 * @param numberofunitsofgoods РР·РјРµРЅСЏРµРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚Р° 
+	 * @return РќРѕРІРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	double changeinthequantityofgoods(const int numberofunitsofgoods) const;
+	void change_in_the_quantity_of_goods(const unsigned int number_of_units_of_goods) const;
 	/**
-	 * @brief Вычисления стоимости продуктов
-	 * @param thepriceoftheproduct Цены продуктов
-	 * @return Суммарная стоимость
+	 * @brief Р’С‹С‡РёСЃР»РµРЅРёСЏ СЃС‚РѕРёРјРѕСЃС‚Рё РїСЂРѕРґСѓРєС‚РѕРІ
+	 	 * @return РЎСѓРјРјР°СЂРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ
 	*/
-	double calculatingthecostofgoods(const double thepriceoftheproduct) const;
+	double calculating_the_cost_of_goods() const;
 	/**
-	 * @brief Вывод стоимости продуктов в виде строки
-	 * @param thepriceoftheproduct Стоимость продуктов
-	 * @return Стоимость продуктов в виде строки
+	 * @brief Р’С‹РІРѕРґ СЃС‚РѕРёРјРѕСЃС‚Рё РїСЂРѕРґСѓРєС‚РѕРІ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
+	 	 * @return РЎС‚РѕРёРјРѕСЃС‚СЊ РїСЂРѕРґСѓРєС‚РѕРІ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
 	*/
-	std::string toString(const double thepriceoftheproduct) const;
+	std::string output_products () const;
 
 
 private:
 	/**
-	 * @brief Имя продукта
+	 * @brief РРјСЏ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	std::string Nameofproduct;
+	std::string name_of_product;
 	/**
-	 * @brief Дата оформления продукта
+	 * @brief Р”Р°С‚Р° РѕС„РѕСЂРјР»РµРЅРёСЏ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	std::string dateofproduct;
+	std::tm date_of_product;
 	/**
-	 * @brief Цена продукта
+	 * @brief Р¦РµРЅР° РїСЂРѕРґСѓРєС‚Р°
 	*/
-	double thepriceoftheproduct;
+	double the_price_of_the_product;
 	/**
-	 * @brief Количество продукта
+	 * @brief РљРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС‚Р°
 	*/
-	int numberofunitsofgoods;
+	int number_of_units_of_goods;
 	/**
-	 * @brief Номер накладной
+	 * @brief РќРѕРјРµСЂ РЅР°РєР»Р°РґРЅРѕР№
 	*/
-	std::string numberofwaybillr;
+	std::string number_of_waybillr;
 
 };
